@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import 'src/bindings/init_binding.dart';
 import 'src/view/app.dart';
 
 void main() {
@@ -11,11 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
           appBarTheme: const AppBarTheme(
               backgroundColor: Colors.white, foregroundColor: Colors.black)),
       home: const App(),
+      initialBinding: InitBinding(),
     );
   }
 }
