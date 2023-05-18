@@ -14,9 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-              backgroundColor: Colors.white, foregroundColor: Colors.black)),
+      theme: ThemeData(),
       home: const App(),
       initialBinding: InitBinding(),
     );

@@ -17,16 +17,16 @@ class InputField extends StatelessWidget {
       controller: controller,
       cursorColor: Colors.black,
       decoration: InputDecoration(
-        isDense: true,
-        border: InputBorder.none,
-        focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.blue, width: 1.5),
-            borderRadius: BorderRadius.circular(25.0)),
-        enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.black, width: 1.5),
-            borderRadius: BorderRadius.circular(25.0)),
-        hintText: hintText,
-      ),
+          isDense: true,
+          border: InputBorder.none,
+          focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.white, width: 3.0),
+              borderRadius: BorderRadius.circular(12.0)),
+          enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.white, width: 1.5),
+              borderRadius: BorderRadius.circular(12.0)),
+          hintText: hintText,
+          hintStyle: const TextStyle(color: Colors.black)),
     );
   }
 }

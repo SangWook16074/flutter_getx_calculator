@@ -16,4 +16,10 @@ class AppController extends GetxController {
     var total = number1 + number2;
     _result(total);
   }
+
+  void reset() {
+    _result(0);
+    num1.clear();
+    num2.clear();
+  }
 }
