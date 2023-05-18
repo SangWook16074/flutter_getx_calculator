@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import 'src/bindings/init_binding.dart';
 import 'src/view/app.dart';
 
 void main() {
@@ -11,8 +13,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: App(),
+    return GetMaterialApp(
+      home: const App(),
+      initialBinding: InitBinding(),
     );
   }
 }
