@@ -13,15 +13,18 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      keyboardType: TextInputType.number,
       controller: controller,
+      cursorColor: Colors.black,
       decoration: InputDecoration(
+        isDense: true,
         border: InputBorder.none,
         focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.blue, width: 2.0),
-            borderRadius: BorderRadius.circular(15.0)),
+            borderSide: const BorderSide(color: Colors.blue, width: 1.5),
+            borderRadius: BorderRadius.circular(25.0)),
         enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.black, width: 2.0),
-            borderRadius: BorderRadius.circular(15.0)),
+            borderSide: const BorderSide(color: Colors.black, width: 1.5),
+            borderRadius: BorderRadius.circular(25.0)),
         hintText: hintText,
       ),
     );
