@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_calculator/src/components/input_field.dart';
+import 'package:flutter_getx_calculator/src/controller/app_controller.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 
-class App extends StatelessWidget {
+class App extends GetView<AppController> {
   const App({super.key});
 
   @override
@@ -26,12 +28,14 @@ class App extends StatelessWidget {
   }
 
   Widget _result() {
-    return const SafeArea(
+    return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Text(
-          '결과 : Result',
-          style: TextStyle(fontSize: 40),
+        padding: const EdgeInsets.all(8.0),
+        child: Obx(
+          () => Text(
+            '결과 : ${controller.result}',
+            style: const TextStyle(fontSize: 40),
+          ),
         ),
       ),
     );
@@ -39,16 +43,18 @@ class App extends StatelessWidget {
 
   Widget _input() {
     return Column(
-      children: const [
+      children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: InputField(
+            controller: controller.num1,
             hintText: '첫번째 숫자',
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: InputField(
+            controller: controller.num2,
             hintText: '두번째 숫자',
           ),
         ),
@@ -57,6 +63,7 @@ class App extends StatelessWidget {
   }
 
   Widget _button() {
-    return ElevatedButton(onPressed: () {}, child: const Text('더하기'));
+    return ElevatedButton(
+        onPressed: controller.calculate, child: const Text('더하기'));
   }
 }
