@@ -99,24 +99,33 @@ class App extends GetView<AppController> {
   }
 
   Widget _button() {
-    return SizedBox(
-      width: 200,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          GlassButton(
-              onPressed: controller.calculate,
-              child: const Icon(
-                Icons.add,
-                color: Colors.white,
-              )),
-          GlassButton(
-              onPressed: controller.reset,
-              child: const Icon(
-                Icons.refresh,
-                color: Colors.white,
-              )),
-        ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: SizedBox(
+        width: 200,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            GlassButton(
+                onPressed: controller.plus,
+                child: const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                )),
+            GlassButton(
+                onPressed: controller.minus,
+                child: const Icon(
+                  Icons.remove,
+                  color: Colors.white,
+                )),
+            GlassButton(
+                onPressed: controller.reset,
+                child: const Icon(
+                  Icons.refresh,
+                  color: Colors.white,
+                )),
+          ],
+        ),
       ),
     );
   }

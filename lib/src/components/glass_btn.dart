@@ -10,7 +10,7 @@ class GlassButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        width: 80,
+        width: 50,
         height: 50,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),

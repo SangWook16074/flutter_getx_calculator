@@ -9,11 +9,19 @@ class AppController extends GetxController {
   final TextEditingController num1 = TextEditingController();
   final TextEditingController num2 = TextEditingController();
 
-  void calculate() {
+  void plus() {
     final number1 = int.parse(num1.value.text.toString().trim());
     final number2 = int.parse(num2.value.text.toString().trim());
 
     var total = number1 + number2;
+    _result(total);
+  }
+
+  void minus() {
+    final number1 = int.parse(num1.value.text.toString().trim());
+    final number2 = int.parse(num2.value.text.toString().trim());
+
+    var total = number1 - number2;
     _result(total);
   }
 
