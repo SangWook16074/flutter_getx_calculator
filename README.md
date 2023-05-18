@@ -1,16 +1,7 @@
 # flutter_getx_calculator
 
-A new Flutter project.
+GetX라이브러리를 이해하기 위한 덧셈, 뺄셈 계산기 앱 예제입니다.
 
-## Getting Started
+## 앱 UI
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Simulator Screen Shot - MyIphone 13 Pro - 2023-05-18 at 22 04 12](https://github.com/SangWook16074/flutter_getx_calculator/assets/108314973/3c07b7ef-de11-4b75-8bb9-5a1c464b7400)
